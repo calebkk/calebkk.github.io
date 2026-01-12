@@ -1,0 +1,61 @@
+<section id="about" class="about-section">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="section-header" @fadeUp>
+      <h2>
+        About <span class="highlight">Me</span>
+      </h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="content-grid">
+
+      <!-- Text Content -->
+      <div class="about-text" @slideLeft>
+        <p>
+          I'm a passionate software developer with over 5 years of experience building scalable
+          web applications. My journey in tech started with a curiosity for how things work,
+          and it's evolved into a career where I get to solve complex problems and create
+          meaningful digital experiences.
+        </p>
+
+        <p>
+          I specialize in full-stack development, with a strong focus on modern JavaScript
+          frameworks and cloud infrastructure. I believe in writing clean, maintainable code
+          and staying up-to-date with the latest industry trends.
+        </p>
+
+        <p>
+          When I'm not coding, you'll find me contributing to open-source projects, reading
+          tech blogs, or exploring new technologies that push the boundaries of what's possible
+          on the web.
+        </p>
+      </div>
+
+      <!-- Features -->
+      <div class="features">
+        <div
+          class="feature-card"
+          *ngFor="let feature of features; let i = index"
+          @slideRight
+          [style.animationDelay]="(0.2 + i * 0.1) + 's'"
+        >
+          <div class="icon-wrapper">
+            <lucide-icon
+              [name]="feature.icon"
+              size="24"
+              [style.color]="feature.color">
+            </lucide-icon>
+          </div>
+
+          <div class="feature-content">
+            <h4>{{ feature.title }}</h4>
+            <p>{{ feature.description }}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

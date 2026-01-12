@@ -1,0 +1,49 @@
+<section id="home" class="hero">
+  <div class="hero-content">
+
+    <!-- Availability Badge -->
+    <div class="status-badge" @fadeUp>
+      <span class="dot">●</span>
+      <span>Available for work</span>
+    </div>
+
+    <!-- Heading -->
+    <h1 class="hero-title" @fadeUp>
+      Hi, I'm <span class="highlight">Alex Morgan</span>
+    </h1>
+
+    <h2 class="hero-subtitle" @fadeUp>
+      Full-Stack Software Developer
+    </h2>
+
+    <p class="hero-description" @fadeUp>
+      I craft exceptional digital experiences that blend elegant design with robust functionality.
+      Specialized in React, Node.js, and cloud technologies.
+    </p>
+
+    <!-- CTA Buttons -->
+    <div class="cta-group" @fadeUp>
+      <a href="#contact" class="btn primary">Get in Touch</a>
+      <a href="#projects" class="btn secondary">View Work</a>
+    </div>
+
+    <!-- Social Icons -->
+    <div class="social-links" @fadeIn>
+      <a href="https://github.com" target="_blank">
+        <lucide-icon name="github" size="20"></lucide-icon>
+      </a>
+      <a href="https://linkedin.com" target="_blank">
+        <lucide-icon name="linkedin" size="20"></lucide-icon>
+      </a>
+      <a href="mailto:alex@example.com">
+        <lucide-icon name="mail" size="20"></lucide-icon>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Scroll Down -->
+  <button class="scroll-down" (click)="scrollToAbout()" @fadeIn>
+    <lucide-icon name="arrow-down" size="24"></lucide-icon>
+  </button>
+</section>

@@ -1,0 +1,146 @@
+<section id="contact" class="py-20 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-4xl mx-auto">
+    <!-- Header -->
+    <div @fadeUp>
+      <h2 class="mb-4 text-center">
+        Get In <span class="text-[var(--color-primary)]">Touch</span>
+      </h2>
+
+      <div class="w-20 h-1 bg-[var(--color-primary)] mx-auto mb-6"></div>
+
+      <p class="text-center text-[var(--color-text-secondary)] mb-12 max-w-2xl mx-auto">
+        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- Contact Info -->
+      <div class="space-y-4" @fadeLeft>
+        <!-- Email -->
+        <div
+          class="p-6 bg-[var(--color-surface)] rounded-xl border border-[var(--color-border)]
+                 hover:border-[var(--color-primary)]
+                 hover:shadow-lg hover:shadow-[var(--color-primary)]/20
+                 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]"
+        >
+          <div class="flex items-start gap-4">
+            <div
+              class="p-3 bg-[var(--color-surface-elevated)] rounded-lg
+                     hover:rotate-[360deg] transition-transform duration-500"
+            >
+              <lucide-icon name="mail" size="24" class="text-[var(--color-primary)]"></lucide-icon>
+            </div>
+            <div>
+              <h4 class="mb-2">Email</h4>
+              <a
+                href="mailto:alex@example.com"
+                class="text-[var(--color-text-secondary)]
+                       hover:text-[var(--color-primary)] transition-colors"
+              >
+                alex@example.com
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div
+          class="p-6 bg-[var(--color-surface)] rounded-xl border border-[var(--color-border)]
+                 hover:border-[var(--color-accent)]
+                 hover:shadow-lg hover:shadow-[var(--color-accent)]/20
+                 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]"
+        >
+          <div class="flex items-start gap-4">
+            <div
+              class="p-3 bg-[var(--color-surface-elevated)] rounded-lg
+                     hover:rotate-[360deg] transition-transform duration-500"
+            >
+              <lucide-icon name="map-pin" size="24" class="text-[var(--color-accent)]"></lucide-icon>
+            </div>
+            <div>
+              <h4 class="mb-2">Location</h4>
+              <p class="text-[var(--color-text-secondary)]">San Francisco, CA</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div
+          class="p-6 bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-accent)]
+                 rounded-xl hover:shadow-lg hover:shadow-[var(--color-primary)]/30
+                 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]"
+        >
+          <h4 class="mb-2">Let's work together!</h4>
+          <p class="text-[var(--color-text-secondary)]">
+            Feel free to reach out for collaborations or just a friendly hello.
+          </p>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <form
+        class="space-y-4 p-6 bg-[var(--color-surface)] rounded-xl border border-[var(--color-border)]"
+        (ngSubmit)="handleSubmit()"
+        #contactForm="ngForm"
+        @fadeRight
+      >
+        <div>
+          <label class="block mb-2 text-[var(--color-text-secondary)]">Name</label>
+          <input
+            type="text"
+            name="name"
+            [(ngModel)]="formData.name"
+            required
+            placeholder="Your name"
+            class="w-full px-4 py-3 bg-[var(--color-background)]
+                   border border-[var(--color-border)] rounded-lg
+                   focus:outline-none focus:border-[var(--color-primary)]
+                   transition-colors"
+          />
+        </div>
+
+        <div>
+          <label class="block mb-2 text-[var(--color-text-secondary)]">Email</label>
+          <input
+            type="email"
+            name="email"
+            [(ngModel)]="formData.email"
+            required
+            placeholder="your.email@example.com"
+            class="w-full px-4 py-3 bg-[var(--color-background)]
+                   border border-[var(--color-border)] rounded-lg
+                   focus:outline-none focus:border-[var(--color-primary)]
+                   transition-colors"
+          />
+        </div>
+
+        <div>
+          <label class="block mb-2 text-[var(--color-text-secondary)]">Message</label>
+          <textarea
+            name="message"
+            rows="5"
+            [(ngModel)]="formData.message"
+            required
+            placeholder="Your message..."
+            class="w-full px-4 py-3 bg-[var(--color-background)]
+                   border border-[var(--color-border)] rounded-lg
+                   focus:outline-none focus:border-[var(--color-primary)]
+                   transition-colors resize-none"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full px-6 py-3 bg-[var(--color-primary)]
+                 hover:bg-[var(--color-primary-dark)]
+                 rounded-lg transition-all duration-200
+                 flex items-center justify-center gap-2
+                 hover:scale-[1.02] active:scale-[0.98]"
+        >
+          <span>Send Message</span>
+          <lucide-icon name="send" size="18"></lucide-icon>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

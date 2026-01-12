@@ -1,0 +1,72 @@
+<section
+  id="experience"
+  class="py-20 px-4 sm:px-6 lg:px-8 bg-[var(--color-surface)]"
+>
+  <div class="max-w-5xl mx-auto">
+    <!-- Section header -->
+    <div @fadeInUp>
+      <h2 class="mb-4 text-center">
+        Work <span class="text-[var(--color-primary)]">Experience</span>
+      </h2>
+      <div class="w-20 h-1 bg-[var(--color-primary)] mx-auto mb-12"></div>
+    </div>
+
+    <!-- Experience list -->
+    <div class="space-y-6" @container>
+      <div
+        *ngFor="let exp of experiences"
+        class="experience-item relative p-6 bg-[var(--color-background)] rounded-xl border border-[var(--color-border)]
+               hover:border-[var(--color-primary)] hover:shadow-lg
+               hover:shadow-[var(--color-primary)]/20 transition-all duration-300"
+      >
+        <!-- Decorative dot -->
+        <div
+          class="absolute -left-3 top-8 w-6 h-6 bg-[var(--color-primary)]
+                 rounded-full border-4 border-[var(--color-surface)]"
+        ></div>
+
+        <!-- Header -->
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4 gap-2">
+          <div class="flex items-center gap-3">
+            <div
+              class="p-2 bg-[var(--color-surface-elevated)] rounded-lg
+                     transition-transform duration-500 hover:rotate-[360deg]"
+            >
+              <lucide-icon
+                name="briefcase"
+                size="20"
+                class="text-[var(--color-primary)]"
+              ></lucide-icon>
+            </div>
+
+            <div>
+              <h3 class="text-[var(--color-text-primary)]">
+                {{ exp.position }}
+              </h3>
+              <span class="text-[var(--color-primary)]">
+                {{ exp.company }}
+              </span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2 text-[var(--color-text-muted)] md:ml-auto">
+            <lucide-icon name="calendar" size="16"></lucide-icon>
+            <span>{{ exp.period }}</span>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <ul class="space-y-2 text-[var(--color-text-secondary)] ml-0 md:ml-14">
+          <li
+            *ngFor="let item of exp.description"
+            @listItem
+            class="flex items-start gap-2"
+          >
+            <span class="text-[var(--color-accent)] mt-1">▹</span>
+            <span>{{ item }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

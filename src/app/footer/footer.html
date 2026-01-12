@@ -1,0 +1,62 @@
+<footer
+  class="py-12 px-4 sm:px-6 lg:px-8
+         bg-[var(--color-surface)]
+         border-t border-[var(--color-border)]"
+>
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-col items-center gap-6">
+      <!-- Social Links -->
+      <div class="flex items-center gap-6">
+        <a
+          href="https://github.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="p-3 bg-[var(--color-surface-elevated)]
+                 hover:bg-[var(--color-background)]
+                 rounded-lg border border-[var(--color-border)]
+                 transition-colors duration-200"
+        >
+          <lucide-icon name="github" size="20"></lucide-icon>
+        </a>
+
+        <a
+          href="https://linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="p-3 bg-[var(--color-surface-elevated)]
+                 hover:bg-[var(--color-background)]
+                 rounded-lg border border-[var(--color-border)]
+                 transition-colors duration-200"
+        >
+          <lucide-icon name="linkedin" size="20"></lucide-icon>
+        </a>
+
+        <a
+          href="mailto:alex@example.com"
+          class="p-3 bg-[var(--color-surface-elevated)]
+                 hover:bg-[var(--color-background)]
+                 rounded-lg border border-[var(--color-border)]
+                 transition-colors duration-200"
+        >
+          <lucide-icon name="mail" size="20"></lucide-icon>
+        </a>
+      </div>
+
+      <!-- Credit -->
+      <div class="flex items-center gap-2 text-[var(--color-text-secondary)]">
+        <span>Made with</span>
+        <lucide-icon
+          name="heart"
+          size="16"
+          class="text-[var(--color-primary)] fill-current"
+        ></lucide-icon>
+        <span>by Alex Morgan</span>
+      </div>
+
+      <!-- Copyright -->
+      <p class="text-[var(--color-text-muted)]">
+        © {{ currentYear }} All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>

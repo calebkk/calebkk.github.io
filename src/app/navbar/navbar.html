@@ -1,0 +1,43 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-inner">
+
+      <!-- Logo -->
+      <div class="logo">
+        <span class="logo-symbol">&lt;/&gt;</span>
+        <span class="logo-text">Portfolio</span>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="nav-desktop">
+        <button
+          *ngFor="let item of navItems"
+          (click)="scrollToSection(item.href)"
+          class="nav-link"
+        >
+          {{ item.label }}
+        </button>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="menu-toggle" (click)="toggleMenu()">
+        <lucide-icon
+          [name]="isMenuOpen ? 'x' : 'menu'"
+          size="24">
+        </lucide-icon>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" *ngIf="isMenuOpen">
+    <button
+      *ngFor="let item of navItems"
+      (click)="scrollToSection(item.href)"
+      class="mobile-link"
+    >
+      {{ item.label }}
+    </button>
+  </div>
+</nav>
