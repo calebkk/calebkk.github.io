@@ -1,61 +1,60 @@
-<section id="about" class="about-section">
+
+<section id="about" class="about">
   <div class="container">
 
-    <!-- Section Header -->
-    <div class="section-header" @fadeUp>
-      <h2>
-        About <span class="highlight">Me</span>
-      </h2>
-      <div class="divider"></div>
-    </div>
-
-    <div class="content-grid">
-
-      <!-- Text Content -->
-      <div class="about-text" @slideLeft>
-        <p>
-          I'm a passionate software developer with over 5 years of experience building scalable
-          web applications. My journey in tech started with a curiosity for how things work,
-          and it's evolved into a career where I get to solve complex problems and create
-          meaningful digital experiences.
-        </p>
-
-        <p>
-          I specialize in full-stack development, with a strong focus on modern JavaScript
-          frameworks and cloud infrastructure. I believe in writing clean, maintainable code
-          and staying up-to-date with the latest industry trends.
-        </p>
-
-        <p>
-          When I'm not coding, you'll find me contributing to open-source projects, reading
-          tech blogs, or exploring new technologies that push the boundaries of what's possible
-          on the web.
-        </p>
+    <!-- Section Heading -->
+    <header class="section-header" @fadeUp>
+      <h2 class="title">About Me</h2>
+      <div class="title-underline">
+        <span class="line"></span>
+        <span class="dot"></span>
       </div>
+    </header>
 
-      <!-- Features -->
-      <div class="features">
-        <div
-          class="feature-card"
-          *ngFor="let feature of features; let i = index"
-          @slideRight
-          [style.animationDelay]="(0.2 + i * 0.1) + 's'"
-        >
-          <div class="icon-wrapper">
-            <lucide-icon
-              [name]="feature.icon"
-              size="24"
-              [style.color]="feature.color">
-            </lucide-icon>
-          </div>
+    <!-- Intro Glass Panel -->
+    <article class="about-panel" @fadeUp>
+      <p>
+        Results-driven Software Developer with expertise in full-stack development, cloud computing, and data analysis. 
+        I design and implement scalable software solutions that enhance efficiency and drive business success. 
+        With experience in ERP systems, AI-powered automation, IoT integration, and cybersecurity, I'm passionate about 
+        creating innovative solutions in fast-paced, collaborative environments.
+      </p>
+      <p>
+        My journey includes developing visitor management systems, pharmacy platforms, ERP solutions, and IoT automation projects. 
+        I'm dedicated to continuous learning and staying ahead of the curve in emerging technologies like blockchain, AI-driven automation, 
+        and cloud infrastructure. When not coding, I'm exploring new technologies, contributing to projects, or sharing knowledge with the developer community.
+      </p>
+    </article>
 
-          <div class="feature-content">
-            <h4>{{ feature.title }}</h4>
-            <p>{{ feature.description }}</p>
-          </div>
+    <!-- Feature Cards -->
+    <div class="feature-grid" @fadeIn>
+      <!-- Clean Code -->
+      <div class="feature-card">
+        <div class="icon-wrap purple">
+          <lucide-icon name="code-2" size="22"></lucide-icon>
         </div>
+        <h3>Scalable Solutions</h3>
+        <p>Designing and implementing robust, scalable software solutions for enterprise systems.</p>
       </div>
 
+      <!-- Cloud & DevOps -->
+      <div class="feature-card">
+        <div class="icon-wrap pink">
+          <lucide-icon name="cloud" size="22"></lucide-icon>
+        </div>
+        <h3>Cloud & DevOps</h3>
+        <p>Expert in AWS, Azure, Google Cloud, and modern DevOps practices for deployment optimization.</p>
+      </div>
+
+      <!-- AI & Automation -->
+      <div class="feature-card">
+        <div class="icon-wrap blue">
+          <lucide-icon name="zap" size="22"></lucide-icon>
+        </div>
+        <h3>AI & Automation</h3>
+        <p>Building intelligent systems with machine learning, AI-powered automation, and process optimization.</p>
+      </div>
     </div>
+
   </div>
 </section>

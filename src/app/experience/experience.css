@@ -1,0 +1,161 @@
+
+/* ===== Section base ===== */
+.experience {
+  position: relative;
+  padding: clamp(56px, 9vw, 110px) 1.25rem;
+  color: var(--color-text, #e9ecf5);
+  isolation: isolate;
+}
+.experience .container {
+  width: min(1100px, 100%);
+  margin-inline: auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Subtle background glow */
+.experience::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(1000px 520px at 15% 0%, rgba(163, 92, 255, 0.18), transparent 60%),
+    radial-gradient(900px 520px at 90% 100%, rgba(79, 140, 255, 0.16), transparent 62%);
+  z-index: 0;
+}
+
+/* ===== Heading ===== */
+.section-header {
+  text-align: center;
+  margin-bottom: clamp(26px, 4.6vw, 40px);
+}
+.title {
+  margin: 0;
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.title-underline {
+  width: 120px;
+  height: 10px;
+  margin: 10px auto 0;
+  position: relative;
+}
+.title-underline .line {
+  display: block;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--color-primary, #8b5cf6), var(--color-accent, #4f8cff));
+  opacity: 0.9;
+}
+.title-underline .dot {
+  position: absolute;
+  right: -6px;
+  top: -2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-accent, #4f8cff);
+  box-shadow: 0 0 12px rgba(79, 140, 255, 0.7);
+}
+
+/* ===== Grid (4 cards) ===== */
+.exp-grid {
+  display: grid;
+  gap: clamp(16px, 2.6vw, 24px);
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 820px) {
+  .exp-grid { grid-template-columns: 1fr; }
+}
+
+/* ===== Card ===== */
+.exp-card {
+  background:
+    linear-gradient(135deg, rgba(163, 92, 255, 0.09), rgba(79, 140, 255, 0.06)),
+    var(--color-surface, rgba(255,255,255,0.06));
+  border: 1px solid var(--color-border, rgba(255,255,255,0.16));
+  border-radius: 16px;
+  padding: clamp(16px, 2.6vw, 22px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.32);
+  transition: transform 140ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+.exp-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(163, 92, 255, 0.38);
+  box-shadow: 0 18px 46px rgba(163, 92, 255, 0.20);
+}
+
+/* Header block inside card */
+.exp-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.exp-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: linear-gradient(135deg, var(--color-primary, #8b5cf6), var(--color-accent, #4f8cff));
+  box-shadow: 0 8px 22px rgba(79, 140, 255, 0.28);
+}
+.exp-icon.purple { background: linear-gradient(135deg, #8b5cf6, #6f50ff); box-shadow: 0 8px 22px rgba(139,92,246,0.32); }
+.exp-icon.blue   { background: linear-gradient(135deg, #60a5fa, #4f8cff);  box-shadow: 0 8px 22px rgba(79,140,255,0.30); }
+.exp-icon.pink   { background: linear-gradient(135deg, #f472b6, #c084fc);  box-shadow: 0 8px 22px rgba(244,114,182,0.30); }
+.exp-icon.teal   { background: linear-gradient(135deg, #34d399, #22d3ee);  box-shadow: 0 8px 22px rgba(34,211,238,0.28); }
+
+.exp-headings .company {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+.role-dates {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-text-secondary, #b7bed1);
+  font-size: 0.95rem;
+}
+.role-dates .role { font-weight: 600; color: #e6ecff; }
+.role-dates .dot  { opacity: 0.6; }
+
+/* Summary */
+.summary {
+  margin: 10px 0 10px;
+  color: var(--color-text-secondary, #b7bed1);
+  line-height: 1.75;
+}
+
+/* Bullet list */
+.bullets {
+  margin: 0 0 10px 1rem;
+  padding: 0;
+  color: var(--color-text-secondary, #b7bed1);
+  line-height: 1.65;
+}
+.bullets li { margin-bottom: 6px; }
+.bullets li::marker { color: var(--color-accent, #4f8cff); }
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+.tags span {
+  font-size: 0.85rem;
+  color: #eaf0ff;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(163,92,255,0.18), rgba(79,140,255,0.16));
+  border: 1px solid rgba(255,255,255,0.16);
+  backdrop-filter: blur(6px);
+}

@@ -1,72 +1,145 @@
-<section
-  id="experience"
-  class="py-20 px-4 sm:px-6 lg:px-8 bg-[var(--color-surface)]"
->
-  <div class="max-w-5xl mx-auto">
-    <!-- Section header -->
-    <div @fadeInUp>
-      <h2 class="mb-4 text-center">
-        Work <span class="text-[var(--color-primary)]">Experience</span>
-      </h2>
-      <div class="w-20 h-1 bg-[var(--color-primary)] mx-auto mb-12"></div>
-    </div>
 
-    <!-- Experience list -->
-    <div class="space-y-6" @container>
-      <div
-        *ngFor="let exp of experiences"
-        class="experience-item relative p-6 bg-[var(--color-background)] rounded-xl border border-[var(--color-border)]
-               hover:border-[var(--color-primary)] hover:shadow-lg
-               hover:shadow-[var(--color-primary)]/20 transition-all duration-300"
-      >
-        <!-- Decorative dot -->
-        <div
-          class="absolute -left-3 top-8 w-6 h-6 bg-[var(--color-primary)]
-                 rounded-full border-4 border-[var(--color-surface)]"
-        ></div>
+<section id="experience" class="experience">
+  <div class="container">
 
-        <!-- Header -->
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4 gap-2">
-          <div class="flex items-center gap-3">
-            <div
-              class="p-2 bg-[var(--color-surface-elevated)] rounded-lg
-                     transition-transform duration-500 hover:rotate-[360deg]"
-            >
-              <lucide-icon
-                name="briefcase"
-                size="20"
-                class="text-[var(--color-primary)]"
-              ></lucide-icon>
-            </div>
+    <!-- Heading -->
+    <header class="section-header" @fadeUp>
+      <h2 class="title">Work Experience</h2>
+      <div class="title-underline">
+        <span class="line"></span>
+        <span class="dot"></span>
+      </div>
+    </header>
 
-            <div>
-              <h3 class="text-[var(--color-text-primary)]">
-                {{ exp.position }}
-              </h3>
-              <span class="text-[var(--color-primary)]">
-                {{ exp.company }}
-              </span>
-            </div>
+    <!-- Experience Grid (4 items) -->
+    <div class="exp-grid" @fadeIn>
+      <!-- Item 1 -->
+      <article class="exp-card">
+        <div class="exp-header">
+          <div class="exp-icon purple">
+            <lucide-icon name="briefcase" size="20"></lucide-icon>
           </div>
-
-          <div class="flex items-center gap-2 text-[var(--color-text-muted)] md:ml-auto">
-            <lucide-icon name="calendar" size="16"></lucide-icon>
-            <span>{{ exp.period }}</span>
+          <div class="exp-headings">
+            <h3 class="company">Offshore Global Logistics</h3>
+            <div class="role-dates">
+              <span class="role">IT Support Specialist</span>
+              <span class="dot">•</span>
+              <span class="dates">May 2025 — Present</span>
+            </div>
           </div>
         </div>
 
-        <!-- Description -->
-        <ul class="space-y-2 text-[var(--color-text-secondary)] ml-0 md:ml-14">
-          <li
-            *ngFor="let item of exp.description"
-            @listItem
-            class="flex items-start gap-2"
-          >
-            <span class="text-[var(--color-accent)] mt-1">▹</span>
-            <span>{{ item }}</span>
-          </li>
+        <p class="summary">
+          Full-stack development, ERP support, cybersecurity, and system administration for enterprise logistics operations.
+        </p>
+
+        <ul class="bullets">
+          <li>Designed and deployed Visitor Management System with Django, TailwindCSS, and SQLite with email notifications.</li>
+          <li>Managed Fresa ERP data validation and order placement in WMS; SAP-WMS and SAGE-WMS integrations.</li>
+          <li>Conducted penetration testing and led cybersecurity awareness training for staff.</li>
+          <li>Audited and redesigned company website for SEO and mobile optimization.</li>
         </ul>
-      </div>
+
+        <div class="tags">
+          <span>Django</span><span>TailwindCSS</span><span>ERP</span><span>Cybersecurity</span>
+        </div>
+      </article>
+
+      <!-- Item 2 -->
+      <article class="exp-card">
+        <div class="exp-header">
+          <div class="exp-icon blue">
+            <lucide-icon name="server" size="20"></lucide-icon>
+          </div>
+          <div class="exp-headings">
+            <h3 class="company">NelsonelTech Solutions Limited</h3>
+            <div class="role-dates">
+              <span class="role">Backend Software Developer</span>
+              <span class="dot">•</span>
+              <span class="dates">Nov 2023 — Apr 2025</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="summary">
+          Engineered multi-tenant pharmacy management system with secure authentication and real-time inventory management.
+        </p>
+
+        <ul class="bullets">
+          <li>Developed multi-tenant pharmacy management system enabling seamless operations for multiple businesses.</li>
+          <li>Implemented secure authentication with role-based access control using Django.</li>
+          <li>Optimized backend processes enhancing transaction efficiency and system reliability.</li>
+          <li>Built automated reporting dashboards with PostgreSQL and MongoDB.</li>
+        </ul>
+
+        <div class="tags">
+          <span>Django</span><span>PostgreSQL</span><span>MongoDB</span><span>Python</span>
+        </div>
+      </article>
+
+      <!-- Item 3 -->
+      <article class="exp-card">
+        <div class="exp-header">
+          <div class="exp-icon pink">
+            <lucide-icon name="cpu" size="20"></lucide-icon>
+          </div>
+          <div class="exp-headings">
+            <h3 class="company">Systems Reengineered (Microsoft Dynamics Partner)</h3>
+            <div class="role-dates">
+              <span class="role">Full-Stack Software Development Intern</span>
+              <span class="dot">•</span>
+              <span class="dates">Jul 2023 — Oct 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="summary">
+          Developed ERP solutions integrating Angular frontend with .NET Web API backend and Microsoft 365 functionalities.
+        </p>
+
+        <ul class="bullets">
+          <li>Developed ERP solutions integrating Angular frontend and .NET Web API backend.</li>
+          <li>Integrated Microsoft 365 Business Central functionalities into custom solutions.</li>
+          <li>Implemented payment gateway integration (M-Pesa) for transaction processing.</li>
+          <li>Designed optimized database structures for scalability and performed system testing.</li>
+        </ul>
+
+        <div class="tags">
+          <span>Angular</span><span>.NET</span><span>C#</span><span>Microsoft 365</span>
+        </div>
+      </article>
+
+      <!-- Item 4 -->
+      <article class="exp-card">
+        <div class="exp-header">
+          <div class="exp-icon teal">
+            <lucide-icon name="code" size="20"></lucide-icon>
+          </div>
+          <div class="exp-headings">
+            <h3 class="company">Freelance Developer</h3>
+            <div class="role-dates">
+              <span class="role">Remote Software Developer</span>
+              <span class="dot">•</span>
+              <span class="dates">Mar 2022 — Jun 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="summary">
+          Built diverse projects including responsive websites, IoT automation, and mentored students in programming.
+        </p>
+
+        <ul class="bullets">
+          <li>Built responsive websites using Angular and WordPress for various clients.</li>
+          <li>Developed IoT automation solutions with Node-RED for smart systems.</li>
+          <li>Integrated Python scripts for data analysis and process automation.</li>
+          <li>Mentored students in C++ programming and algorithm design.</li>
+        </ul>
+
+        <div class="tags">
+          <span>Angular</span><span>WordPress</span><span>Node-RED</span><span>Python</span>
+        </div>
+      </article>
     </div>
   </div>
 </section>

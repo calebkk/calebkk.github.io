@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* -------- Global theme + base -------- */
+:root {
+  /* Core palette */
+  --bg-start: #0a0b1a;           /* deep indigo */
+  --bg-end:   #1a0844;           /* purple */
+  --glow:     rgba(163, 92, 255, 0.35);
+  --accent-1: #a35cff;           /* purple */
+  --accent-2: #4f8cff;           /* blue */
+  --text-strong: #e9ecf5;
+  --text-soft:   #b7bed1;
+  --glass: rgba(255, 255, 255, 0.08);
+  --border-glass: rgba(255, 255, 255, 0.18);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.45);
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+
+  /* Type scale */
+  --display: clamp(3rem, 6vw + 1rem, 6.25rem);
+  --h2: clamp(1.5rem, 2.2vw + 1rem, 2.25rem);
+  --body: clamp(1rem, 0.6vw + 0.9rem, 1.125rem);
+}
+
+/* Optional: a clean base so text looks closer to the inspo */
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  color: var(--text-strong);
+  background: linear-gradient(180deg, var(--bg-start), var(--bg-end));
+  font: 400 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* Prefer smooth rendering */
+* { box-sizing: border-box; }
+a { color: inherit; }

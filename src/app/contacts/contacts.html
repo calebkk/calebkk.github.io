@@ -1,142 +1,101 @@
-<section id="contact" class="py-20 px-4 sm:px-6 lg:px-8">
-  <div class="max-w-4xl mx-auto">
+<section id="contact" class="contact">
+  <div class="contact__container">
+
     <!-- Header -->
-    <div @fadeUp>
-      <h2 class="mb-4 text-center">
-        Get In <span class="text-[var(--color-primary)]">Touch</span>
-      </h2>
-
-      <div class="w-20 h-1 bg-[var(--color-primary)] mx-auto mb-6"></div>
-
-      <p class="text-center text-[var(--color-text-secondary)] mb-12 max-w-2xl mx-auto">
-        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+    <header class="contact__header" @fadeUp>
+      <h2 class="contact__title">Get In <span>Touch</span></h2>
+      <p class="contact__subtitle">
+        Have a project in mind? Let’s work together to create something amazing
       </p>
-    </div>
+    </header>
 
-    <div class="grid md:grid-cols-2 gap-6">
-      <!-- Contact Info -->
-      <div class="space-y-4" @fadeLeft>
-        <!-- Email -->
-        <div
-          class="p-6 bg-[var(--color-surface)] rounded-xl border border-[var(--color-border)]
-                 hover:border-[var(--color-primary)]
-                 hover:shadow-lg hover:shadow-[var(--color-primary)]/20
-                 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]"
-        >
-          <div class="flex items-start gap-4">
-            <div
-              class="p-3 bg-[var(--color-surface-elevated)] rounded-lg
-                     hover:rotate-[360deg] transition-transform duration-500"
-            >
-              <lucide-icon name="mail" size="24" class="text-[var(--color-primary)]"></lucide-icon>
-            </div>
-            <div>
-              <h4 class="mb-2">Email</h4>
-              <a
-                href="mailto:alex@example.com"
-                class="text-[var(--color-text-secondary)]
-                       hover:text-[var(--color-primary)] transition-colors"
-              >
-                alex@example.com
-              </a>
-            </div>
-          </div>
-        </div>
+    <div class="contact__grid">
+      <!-- Left: Info -->
+      <div class="contact__info" @fadeLeft>
+        <h3 class="contact__lead">Let’s talk about your project</h3>
+        <p class="contact__lead-sub">
+          I’m always interested in hearing about new projects and opportunities.
+          Whether you have a question or just want to say hi, feel free to reach out!
+        </p>
 
-        <!-- Location -->
-        <div
-          class="p-6 bg-[var(--color-surface)] rounded-xl border border-[var(--color-border)]
-                 hover:border-[var(--color-accent)]
-                 hover:shadow-lg hover:shadow-[var(--color-accent)]/20
-                 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]"
-        >
-          <div class="flex items-start gap-4">
-            <div
-              class="p-3 bg-[var(--color-surface-elevated)] rounded-lg
-                     hover:rotate-[360deg] transition-transform duration-500"
-            >
-              <lucide-icon name="map-pin" size="24" class="text-[var(--color-accent)]"></lucide-icon>
+        <!-- Info items -->
+        <ul class="contact__list">
+          <li class="contact__item">
+            <div class="contact__icon purple">
+              <lucide-icon name="mail" size="18"></lucide-icon>
             </div>
-            <div>
-              <h4 class="mb-2">Location</h4>
-              <p class="text-[var(--color-text-secondary)]">San Francisco, CA</p>
+            <div class="contact__item-text">
+              <span class="label">Email</span>
+              <a href="mailto:calebkoech16@gmail.com">calebkoech16@gmail.com</a>
             </div>
-          </div>
-        </div>
+          </li>
 
-        <!-- CTA -->
-        <div
-          class="p-6 bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-accent)]
-                 rounded-xl hover:shadow-lg hover:shadow-[var(--color-primary)]/30
-                 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]"
-        >
-          <h4 class="mb-2">Let's work together!</h4>
-          <p class="text-[var(--color-text-secondary)]">
-            Feel free to reach out for collaborations or just a friendly hello.
-          </p>
-        </div>
+          <li class="contact__item">
+            <div class="contact__icon purple">
+              <lucide-icon name="phone" size="18"></lucide-icon>
+            </div>
+            <div class="contact__item-text">
+              <span class="label">Phone</span>
+              <a href="tel:+254796811449">+254 (796) 811-449</a>
+            </div>
+          </li>
+
+          <li class="contact__item">
+            <div class="contact__icon purple">
+              <lucide-icon name="map-pin" size="18"></lucide-icon>
+            </div>
+            <div class="contact__item-text">
+              <span class="label">Location</span>
+              <p>Nairobi, Kenya</p>
+            </div>
+          </li>
+        </ul>
       </div>
 
-      <!-- Contact Form -->
+      <!-- Right: Form -->
       <form
-        class="space-y-4 p-6 bg-[var(--color-surface)] rounded-xl border border-[var(--color-border)]"
+        class="contact__form"
         (ngSubmit)="handleSubmit()"
         #contactForm="ngForm"
         @fadeRight
       >
-        <div>
-          <label class="block mb-2 text-[var(--color-text-secondary)]">Name</label>
+        <div class="form-row">
+          <label for="name">Name</label>
           <input
+            id="name"
             type="text"
             name="name"
             [(ngModel)]="formData.name"
             required
             placeholder="Your name"
-            class="w-full px-4 py-3 bg-[var(--color-background)]
-                   border border-[var(--color-border)] rounded-lg
-                   focus:outline-none focus:border-[var(--color-primary)]
-                   transition-colors"
           />
         </div>
 
-        <div>
-          <label class="block mb-2 text-[var(--color-text-secondary)]">Email</label>
+        <div class="form-row">
+          <label for="email">Email</label>
           <input
+            id="email"
             type="email"
             name="email"
             [(ngModel)]="formData.email"
             required
             placeholder="your.email@example.com"
-            class="w-full px-4 py-3 bg-[var(--color-background)]
-                   border border-[var(--color-border)] rounded-lg
-                   focus:outline-none focus:border-[var(--color-primary)]
-                   transition-colors"
           />
         </div>
 
-        <div>
-          <label class="block mb-2 text-[var(--color-text-secondary)]">Message</label>
+        <div class="form-row">
+          <label for="message">Message</label>
           <textarea
+            id="message"
             name="message"
-            rows="5"
+            rows="6"
             [(ngModel)]="formData.message"
             required
-            placeholder="Your message..."
-            class="w-full px-4 py-3 bg-[var(--color-background)]
-                   border border-[var(--color-border)] rounded-lg
-                   focus:outline-none focus:border-[var(--color-primary)]
-                   transition-colors resize-none"
+            placeholder="Tell me a bit about your project…"
           ></textarea>
         </div>
 
-        <button
-          type="submit"
-          class="w-full px-6 py-3 bg-[var(--color-primary)]
-                 hover:bg-[var(--color-primary-dark)]
-                 rounded-lg transition-all duration-200
-                 flex items-center justify-center gap-2
-                 hover:scale-[1.02] active:scale-[0.98]"
-        >
+        <button type="submit" class="contact__submit">
           <span>Send Message</span>
           <lucide-icon name="send" size="18"></lucide-icon>
         </button>

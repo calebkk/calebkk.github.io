@@ -1,0 +1,78 @@
+Personal Information
+Name: Caleb Kipngetich
+Nationality: Kenyan 
+Gender: Male
+Phone Number: +254796811449
+Email Address: calebkoech16@gmail.com
+Languages Spoken: English and Swahili
+Portfolio website: https://sites.google.com/view/caleb-dev/home
+ Personal Objective
+Results-driven Software Developer with expertise in full-stack development, cloud 
+computing, and data analysis. Ability to design and implement scalable software solutions 
+that enhance efficiency and drive business success. Experienced in ERP systems, AIpowered automation, IoT integration, and cybersecurity. Adept at working in fast-paced, 
+collaborative environments, delivering high-quality, optimized solutions. Seeking 
+opportunities to apply my skills in software development, blockchain, and AI-driven 
+automation to drive innovation and operational excellence in organizations.
+Skills
+• Software Development: Python, C#, JavaScript, TypeScript, Java, PHP, C++
+• Back-end Development: Django, Flask, ASP.NET, Express.js, firebase 
+• Front-end Development: Angular, React, WordPress, Webflow, TailwindCSS
+• Mobile App Development: Java (Android), React Native (iOS & Android)
+• Database Management: PostgreSQL, Microsoft SQL, MongoDB, SQLite
+• Cloud & DevOps: Azure, AWS, Google Cloud, Heroku, GitHub Actions
+• AI & Data Science: Machine Learning, TensorFlow, Pandas, NumPy, LangChain, 
+Jupyter Notebook
+• Cybersecurity & IT Support: Penetration testing, phishing simulations, system 
+administration, help desk support
+• Process Automation: ERP systems, business process automation, API testing 
+(Postman)
+• Blockchain & Web3: Smart contracts, decentralized applications, 
+cryptoeconomics
+• Networking & IoT: Node-RED, Wi-Fi & hotspot management, billing solutions
+Professional Experience
+IT support specialist
+Offshore Global Logistics | May 2025 – to date
+• Full-stack development: Designed and deployed a Visitor Management System 
+(Django, TailwindCSS, SQLite) with email notifications and mobile responsiveness.
+• ERP support: Managed Fresa ERP data validation, order placement in WMS.
+• Participated in SAP-WMS and SAGE-WMS integrations and NAVICUS testing.
+• Cybersecurity: Conducted penetration testing simulations and led staff 
+cybersecurity awareness training.
+• Web Development: Audited and redesigned company website for SEO and mobile 
+optimization; developed Uganda & Tanzania regional sites.
+• System Administration: Set up new devices, installed Windows 11 and Ubuntu OS, 
+handled network troubleshooting, and oversaw fuel tracker installations.
+• Data Preparation: Cleaned and anonymized logistics datasets for AI-based route 
+optimization system to be developed.
+Backend Software Developer
+NelsonelTech Solutions Limited | Nov 2023 – april 2025
+• Engineered a multi-tenant pharmacy management system, enabling seamless 
+operations for multiple businesses.
+• Developed secure authentication with role-based access control.
+• Optimized backend processes using Django, enhancing transaction efficiency.
+• Integrated real-time inventory management and POS modules.
+• Built automated reporting dashboards with PostgreSQL & MongoDB.
+• Provided technical support and training to improve adoption rates.
+Full-Stack Software Development Intern
+Systems Reengineered (Microsoft Dynamics Partner) | Jul 2023 – Oct 2023
+• Developed ERP solutions integrating Angular frontend and .NET Web API backend.
+• Integrated Microsoft 365 Business Central functionalities.
+• Implemented payment gateway integration (M-Pesa).
+• Designed optimized database structures for scalability.
+• Performed testing, debugging, and system monitoring.
+Freelance Software Developer
+Remote | Mar 2022 – Jun 2023
+• Built responsive websites using Angular and WordPress.
+• Developed IoT automation with Node-RED.
+• Integrated Python scripts for data analysis.
+• Mentored students in C++ programming and algorithms.
+• Designed Wi-Fi network solutions with integrated billing software.
+Education
+• Bachelor of Science in Software Development – KCA University
+• High School Diploma – Roret Boys High School
+• Primary Education – St. Stephen’s Academy
+Interests
+• Continuous learning & tech innovation
+• Traveling & cultural experiences
+• Team-building activities
+• Music & educational documentarie

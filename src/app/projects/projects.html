@@ -1,93 +1,110 @@
-<section id="projects" class="py-20 px-4 sm:px-6 lg:px-8">
-  <div class="max-w-6xl mx-auto">
-    <!-- Header -->
-    <div @fadeInUp>
-      <h2 class="mb-4 text-center">
-        Featured <span class="text-[var(--color-primary)]">Projects</span>
-      </h2>
-      <div class="w-20 h-1 bg-[var(--color-primary)] mx-auto mb-12"></div>
-    </div>
+<section id="projects" class="projects">
+  <div class="container">
 
-    <!-- Projects Grid -->
-    <div
-      class="grid md:grid-cols-2 gap-6"
-      @container
-    >
-      <div
-        *ngFor="let project of projects"
-        class="project-card group bg-[var(--color-surface)] rounded-xl border
-               border-[var(--color-border)] overflow-hidden
-               hover:border-[var(--color-primary)]
-               hover:shadow-xl hover:shadow-[var(--color-primary)]/20
-               transition-all duration-300
-               hover:-translate-y-2 hover:scale-[1.03]"
-      >
-        <!-- Image -->
-        <div class="relative overflow-hidden aspect-video">
-          <img
-            [src]="project.image"
-            [alt]="project.title"
-            appImageFallback
-            class="w-full h-full object-cover
-                   group-hover:scale-110 transition-transform duration-500"
-          />
-          <div
-            class="absolute inset-0 bg-gradient-to-t
-                   from-[var(--color-background)] to-transparent opacity-60"
-          ></div>
+    <!-- Section Header -->
+    <header class="section-header" @fadeUp>
+      <h2 class="title">Featured Projects</h2>
+      <p class="subtitle">
+        A showcase of my recent work, from web applications to design systems.
+      </p>
+    </header>
+
+    <!-- Grid -->
+    <div class="projects-grid" @fadeIn>
+
+      <!-- Project Card 1 -->
+      <article class="project-card">
+        <div class="project-image">
+          <img src="tod.jpeg" alt="E-Commerce Platform">
         </div>
 
-        <!-- Content -->
-        <div class="p-6">
-          <h3 class="mb-3">{{ project.title }}</h3>
-
-          <p class="mb-4 text-[var(--color-text-secondary)]">
-            {{ project.description }}
+        <div class="project-content">
+          <h3 class="project-title">TOD game</h3>
+          <p class="project-description">
+            A full‑stack  multi-player game built on angular and firebase.
           </p>
 
-          <!-- Tags -->
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span
-              *ngFor="let tag of project.tags"
-              @tag
-              class="px-3 py-1 bg-[var(--color-surface-elevated)]
-                     text-[var(--color-accent)] rounded-full
-                     hover:scale-110 transition-transform"
-            >
-              {{ tag }}
-            </span>
+          <div class="project-tags">
+            <span>Angular</span><span>Node.js</span><span>Firebase</span><span>GCP</span>
           </div>
 
-          <!-- Links -->
-          <div class="flex items-center gap-4">
-            <a
-              [href]="project.github"
-              target="_blank"
-              rel="noopener"
-              class="flex items-center gap-2
-                     text-[var(--color-text-secondary)]
-                     hover:text-[var(--color-primary)]
-                     transition-all hover:translate-x-1"
-            >
-              <lucide-icon name="github" size="18"></lucide-icon>
-              <span>Code</span>
-            </a>
-
-            <a
-              [href]="project.demo"
-              target="_blank"
-              rel="noopener"
-              class="flex items-center gap-2
-                     text-[var(--color-text-secondary)]
-                     hover:text-[var(--color-primary)]
-                     transition-all hover:translate-x-1"
-            >
-              <lucide-icon name="external-link" size="18"></lucide-icon>
-              <span>Demo</span>
-            </a>
+          <div class="project-links">
+            <a href="#"><lucide-icon name="code"></lucide-icon> Code</a>
+            <a href="https://truth-spinner.web.app/"><lucide-icon name="external-link"></lucide-icon> Live Demo</a>
           </div>
         </div>
-      </div>
+      </article>
+
+      <!-- Project Card 2 -->
+      <article class="project-card">
+        <div class="project-image">
+          <img src="ogl.jpeg" alt="company website">
+        
+        </div>
+
+        <div class="project-content">
+          <h3 class="project-title">Company website</h3>
+          <p class="project-description">
+            Company website built with python, showcasing the organization.
+          </p>
+
+          <div class="project-tags">
+            <span>Python</span><span>Django</span><span>Tailwind</span>
+          </div>
+
+          <div class="project-links">
+            <a href="#"><lucide-icon name="code"></lucide-icon> Code</a>
+            <a href="https://offshoreafrica.org/"><lucide-icon name="external-link"></lucide-icon> Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project Card 3 -->
+      <article class="project-card">
+        <div class="project-image">
+          <img src="vms.jpeg" alt="vms">
+        </div>
+
+        <div class="project-content">
+          <h3 class="project-title">Visitor Management System</h3>
+          <p class="project-description">
+            this is for booking appointments and managing visitors throught the organization.
+          </p>
+
+          <div class="project-tags">
+            <span>python</span><span>django</span><span>PostgreSQL</span>
+          </div>
+
+          <div class="project-links">
+            <a href="#"><lucide-icon name="code"></lucide-icon> Code</a>
+            <a href="#"><lucide-icon name="external-link"></lucide-icon> Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project Card 4 -->
+      <article class="project-card">
+        <div class="project-image">
+          <img src="pha.jpeg" alt="pharmacy">
+        </div>
+
+        <div class="project-content">
+          <h3 class="project-title">Multi-tenant pharmacy management system</h3>
+          <p class="project-description">
+            Modern pharmacy management system for managing pharmacies .
+          </p>
+
+          <div class="project-tags">
+            <span>React</span><span>Tailwind</span><span>Motion</span><span>Vite</span>
+          </div>
+
+          <div class="project-links">
+            <a href="#"><lucide-icon name="code"></lucide-icon> Code</a>
+            <a href="https://www.phamasuites.com/"><lucide-icon name="external-link"></lucide-icon> Live Demo</a>
+          </div>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>

@@ -50,36 +50,47 @@ interface ExperienceItem {
 export class Experience {
   experiences: ExperienceItem[] = [
     {
-      company: 'TechCorp Solutions',
-      position: 'Senior Full-Stack Developer',
-      period: 'Jan 2022 - Present',
+      company: 'Offshore Global Logistics',
+      position: 'IT Support Specialist',
+      period: 'May 2025 - Present',
       description: [
-        'Lead development of microservices architecture serving 1M+ users',
-        'Mentored junior developers and conducted code reviews',
-        'Improved application performance by 40% through optimization',
-        'Implemented CI/CD pipelines reducing deployment time by 60%'
+        'Designed and deployed Visitor Management System with Django, TailwindCSS, and SQLite',
+        'Managed ERP data validation and order placement in WMS systems',
+        'Conducted penetration testing simulations and cybersecurity awareness training',
+        'Audited and redesigned company website for SEO and mobile optimization'
       ]
     },
     {
-      company: 'Digital Innovations Inc',
-      position: 'Full-Stack Developer',
-      period: 'Jun 2020 - Dec 2021',
+      company: 'NelsonelTech Solutions Limited',
+      position: 'Backend Software Developer',
+      period: 'Nov 2023 - Apr 2025',
       description: [
-        'Developed and maintained multiple client-facing web applications',
-        'Collaborated with UX designers to implement responsive designs',
-        'Integrated third-party APIs and payment gateways',
-        'Participated in agile development processes and sprint planning'
+        'Engineered multi-tenant pharmacy management system for multiple businesses',
+        'Developed secure authentication with role-based access control using Django',
+        'Integrated real-time inventory management and POS modules',
+        'Built automated reporting dashboards with PostgreSQL and MongoDB'
       ]
     },
     {
-      company: 'StartUp Labs',
-      position: 'Junior Developer',
-      period: 'Mar 2019 - May 2020',
+      company: 'Systems Reengineered (Microsoft Dynamics Partner)',
+      position: 'Full-Stack Software Development Intern',
+      period: 'Jul 2023 - Oct 2023',
       description: [
-        'Built features for SaaS platform using React and Node.js',
-        'Wrote unit and integration tests achieving 85% code coverage',
-        'Contributed to open-source projects and internal tools',
-        'Learned modern development practices and cloud technologies'
+        'Developed ERP solutions integrating Angular frontend and .NET Web API backend',
+        'Integrated Microsoft 365 Business Central functionalities',
+        'Implemented payment gateway integration (M-Pesa)',
+        'Performed testing, debugging, and system monitoring'
+      ]
+    },
+    {
+      company: 'Freelance Developer',
+      position: 'Remote Software Developer',
+      period: 'Mar 2022 - Jun 2023',
+      description: [
+        'Built responsive websites using Angular and WordPress',
+        'Developed IoT automation solutions with Node-RED',
+        'Integrated Python scripts for data analysis and automation',
+        'Mentored students in C++ programming and algorithms'
       ]
     }
   ];

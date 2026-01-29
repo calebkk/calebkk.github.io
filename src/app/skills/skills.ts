@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import {
   trigger,
   transition,
@@ -20,40 +21,70 @@ interface SkillCategory {
 
 @Component({
   selector: 'app-skills',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './skills.html',
   styleUrl: './skills.css',
 })
 export class Skills {
-    skillCategories: SkillCategory[] = [
+    public skillCategories: SkillCategory[] = [
     {
-      title: 'Frontend',
+      title: 'Programming Languages',
       skills: [
-        { name: 'React', level: 95 },
-        { name: 'TypeScript', level: 90 },
-        { name: 'Next.js', level: 85 },
-        { name: 'Tailwind CSS', level: 90 },
-        { name: 'Vue.js', level: 75 }
+        { name: 'Python', level: 90 },
+        { name: 'TypeScript', level: 85 },
+        { name: 'JavaScript', level: 85 },
+        { name: 'C#', level: 80 },
+        { name: 'Java', level: 75 }
       ]
     },
     {
-      title: 'Backend',
+      title: 'Frontend Development',
       skills: [
-        { name: 'Node.js', level: 90 },
-        { name: 'Python', level: 80 },
+        { name: 'Angular', level: 85 },
+        { name: 'React', level: 80 },
+        { name: 'TailwindCSS', level: 85 },
+        { name: 'WordPress', level: 75 },
+        { name: 'Webflow', level: 70 }
+      ]
+    },
+    {
+      title: 'Backend & Databases',
+      skills: [
+        { name: 'Django', level: 90 },
+        { name: 'Flask', level: 80 },
+        { name: 'Express.js', level: 80 },
         { name: 'PostgreSQL', level: 85 },
-        { name: 'MongoDB', level: 80 },
-        { name: 'GraphQL', level: 75 }
+        { name: 'MongoDB', level: 80 }
       ]
     },
     {
-      title: 'DevOps & Tools',
+      title: 'Cloud & DevOps',
       skills: [
-        { name: 'Docker', level: 85 },
         { name: 'AWS', level: 80 },
-        { name: 'Git', level: 95 },
-        { name: 'CI/CD', level: 80 },
-        { name: 'Kubernetes', level: 70 }
+        { name: 'Azure', level: 80 },
+        { name: 'Google Cloud', level: 75 },
+        { name: 'GitHub Actions', level: 80 },
+        { name: 'Docker', level: 75 }
+      ]
+    },
+    {
+      title: 'AI & Data Science',
+      skills: [
+        { name: 'Machine Learning', level: 75 },
+        { name: 'TensorFlow', level: 70 },
+        { name: 'Pandas', level: 80 },
+        { name: 'NumPy', level: 80 },
+        { name: 'LangChain', level: 70 }
+      ]
+    },
+    {
+      title: 'Specialized Skills',
+      skills: [
+        { name: 'ERP Systems', level: 85 },
+        { name: 'Cybersecurity', level: 75 },
+        { name: 'IoT Integration', level: 75 },
+        { name: 'Mobile Development', level: 70 },
+        { name: 'Blockchain', level: 65 }
       ]
     }
   ];
